@@ -64,6 +64,8 @@ public class PlayerController : MonoBehaviour {
 		//			return;
 		//		}
 
+
+
 		ProcessKeyInput();
 
 		Move();
@@ -94,30 +96,15 @@ public class PlayerController : MonoBehaviour {
 
 
 
-<<<<<<< HEAD
+
 	// change powerups to enum and switch statements 
 	public void JumpPowerUp() {
 		jumpForce += 1.0f;
 	}
-=======
-		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
-			anim.SetTrigger ("Jump");
-			rb.AddForce (new Vector3 (0, jumpForce, 0), ForceMode.Impulse);
-			//SoundManager.instance.PlaySingle (jump);
-		}
-		if (Input.GetKeyDown ("a") && canTurn) { 
-			transform.Rotate (0, -90, 0);
-			moveDirection = transform.forward;
-			canTurn = false;
-			}
 
-		if (Input.GetKeyDown ("d") && canTurn) {
-			transform.Rotate (0, 90, 0);
-			moveDirection = transform.forward;
-			canTurn = false;
-			}
 		
->>>>>>> 25abf5ff957649af82c8126bd6f5377b1bc6f910
+		
+
 
 	public void SpeedPowerUp() {
 		runSpeed += 1.0f;

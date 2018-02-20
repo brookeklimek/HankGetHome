@@ -19,17 +19,16 @@ public class GameManager : MonoBehaviour {
 	public static bool pausedGame;
 
 	// UI Elements
-<<<<<<< HEAD
+
 	public Text scoreText;
 	public Text distanceText;
-=======
-	//public Text scoreText = null;
+
+
 	//public GameObject nextLevelTextObject = null;
 	//pausedTextObject
 	//gameOverTextObject or wonTextObject
 	//play textObject probobaly a menu 
 	//nextLevel or nextPhaseTextObject
->>>>>>> 25abf5ff957649af82c8126bd6f5377b1bc6f910
 
 	public GameObject nextLevelTextObject;
 
@@ -42,12 +41,10 @@ public class GameManager : MonoBehaviour {
 		}
 	
 	void Update () {
-<<<<<<< HEAD
+
 		scoreText.text = "" + score;
 		distanceText.text = "00" + distance;
-=======
-		//scoreText.text = "" + score;
->>>>>>> 25abf5ff957649af82c8126bd6f5377b1bc6f910
+
 
 		 //Pause Game
 		if (pausedGame) { 
@@ -126,7 +123,7 @@ public class GameManager : MonoBehaviour {
 		pausedGame = true;
 	}
 
-<<<<<<< HEAD
+
 	//Private Methods
 	private void Restart() {
 		score = 0;
@@ -139,7 +136,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 
-=======
 //	private void Restart() {
 //		// should we ever?
 //	}
@@ -148,5 +144,4 @@ public class GameManager : MonoBehaviour {
 		Debug.Log("Clicked!");
 		SceneManager.LoadScene (sceneName);
 	}
->>>>>>> 25abf5ff957649af82c8126bd6f5377b1bc6f910
 }

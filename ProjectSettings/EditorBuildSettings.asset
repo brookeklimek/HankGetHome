@@ -12,5 +12,11 @@ EditorBuildSettings:
     path: Assets/_Scenes/Environment_Scene.unity
     guid: 5dd0ba2d158f8d14da788a20823f54eb
   - enabled: 1
-    path: Assets/_Scenes/Procedural_Generation.unity
-    guid: 07980fe2072c7d943897c08835e407f8
+    path: Assets/_Scenes/Level1.unity
+    guid: 2d2d594ffa66d4d1488a2370247f906c
+  - enabled: 1
+    path: Assets/_Scenes/Level2.unity
+    guid: 67b52677a9e3c42a4b8cdef753016736
+  - enabled: 1
+    path: Assets/_Scenes/Level3.unity
+    guid: 49951634e97aa4522beeff12a5370c59

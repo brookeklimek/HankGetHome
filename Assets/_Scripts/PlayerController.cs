@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 	public float defaultRunSpeed = 7.0f;
-	public float speedUpRate = 5.0f;
+	public float speedUpRate = 1.0f;
 	// start animation
 	public float waitStartForAnimation;
 
@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
 	private float runSpeed;
 	private	int runDirection;
 	private Vector3 movePlayer;
-	Rigidbody rb;
+	private Rigidbody rb;
 
 	private bool grounded;
 	private Animator anim; 
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
 	public static bool canTurn;
 	public float jumpForce;
 
-	public int distance;
+	public static int distance;
 
 
 
@@ -90,8 +90,8 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
-	public void SetSpeed(float modifier) {
-		runSpeed += modifier;
+	public void SetSpeed() {
+		runSpeed += speedUpRate;
 	}
 
 
@@ -135,16 +135,17 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void Move() {
+		if (GameManager.state == GameManager.GameState.gameover) {
+			return;
+		}
 		float x = Input.GetAxis ("Horizontal");
-		//Mathf.Clamp (transform.position.x, -1, 1);
 		rb.velocity = new Vector3 (x * runSpeed * Time.deltaTime, rb.velocity.y);
 		transform.Translate (new Vector3 (x * runSpeed * Time.deltaTime, 0, 0));
 
 
-		this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, runDirection, 0), 0.25f);
-		Vector3 v = transform.forward * this.runSpeed;
+		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, runDirection, 0), 0.25f);
+		Vector3 v = transform.forward * runSpeed;
 		v.y = GetComponent<Rigidbody>().velocity.y;
-		//v.x = Mathf.Clamp(transform.position.x, -1.25);
 
 		GetComponent<Rigidbody>().velocity = v;
 	}

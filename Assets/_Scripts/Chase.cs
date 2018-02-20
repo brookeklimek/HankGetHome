@@ -6,6 +6,7 @@ public class Chase : MonoBehaviour {
 	public Transform target;
 	public float speed;
 	private float step;
+	public float waitStartForAnimation;
 
 	void Start() {
 		step = speed * Time.deltaTime;
@@ -13,7 +14,10 @@ public class Chase : MonoBehaviour {
 
 	void Update() {
 		transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-
+		if(Time.time < waitStartForAnimation) {
+			
+			return;
+		}
 
 	}
 

@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 4380873584709378}
   - component: {fileID: 114444467197254394}
   - component: {fileID: 136289288594285046}
+  - component: {fileID: 114063293198505618}
   m_Layer: 0
   m_Name: Bone
   m_TagString: Untagged
@@ -405,6 +406,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1509356347514750}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114063293198505618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858112901293346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ff4118140c24057bb2137e13175dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 70
 --- !u!114 &114444467197254394
 MonoBehaviour:
   m_ObjectHideFlags: 1

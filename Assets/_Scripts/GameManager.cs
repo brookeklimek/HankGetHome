@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour {
 	public Text distanceText;
 	public GameObject deathText;
 	public Text highScoreText;
+	public GameObject playButton;
 
 	//public GameObject nextLevelTextObject = null;
 	//pausedTextObject
@@ -63,11 +64,12 @@ public class GameManager : MonoBehaviour {
 
 		//GameState 
 		if (state == GameState.playing) {
-			
+			playButton.SetActive(false);
 			// Set text objects .SetActive to false
 		}
 		else if (state == GameState.paused) {
 			// set pausedTextObject.SetActive(true);
+			playButton.SetActive(true);
 		}
 		else if (state == GameState.gameover) {
 
@@ -146,6 +148,12 @@ public class GameManager : MonoBehaviour {
 
 	public static void PauseGame() {
 		pausedGame = true;
+	}
+
+	public void PlayGame() {
+		pausedGame = false;
+		state = GameState.playing;
+		Time.timeScale = 1;
 	}
 
 

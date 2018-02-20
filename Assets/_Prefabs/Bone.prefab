@@ -163,11 +163,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1858112901293346}
   m_LocalRotation: {x: 0.8860443, y: 0.09578221, z: -0.21149407, w: 0.40127498}
-<<<<<<< HEAD
   m_LocalPosition: {x: 0.07296445, y: 0.53, z: 0.61}
-=======
-  m_LocalPosition: {x: -0.121, y: 0.57, z: 3.299}
->>>>>>> 25abf5ff957649af82c8126bd6f5377b1bc6f910
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4050736391737510}
@@ -421,7 +417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 5
-<<<<<<< HEAD
+  collect: {fileID: 8300000, guid: d09e88c7366d3384cb38c7295578f510, type: 3}
 --- !u!122 &122207759328291982
 Halo:
   m_ObjectHideFlags: 1
@@ -466,9 +462,6 @@ Halo:
     serializedVersion: 2
     rgba: 4278233343
   m_Size: 0.12
-=======
-  collect: {fileID: 8300000, guid: 999879d309452124aa05ad4a37bb9391, type: 3}
->>>>>>> 25abf5ff957649af82c8126bd6f5377b1bc6f910
 --- !u!136 &136289288594285046
 CapsuleCollider:
   m_ObjectHideFlags: 1

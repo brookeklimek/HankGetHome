@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 
 	public static int level = 1;
 	public static int maxLevel = 3;
-	public static int distanceToNextLevel = 100; // change to 150
+	public static int distanceToNextLevel = 150; // change to 150
 	public static int increaseSpeed = 5;
 
 	public static int score = 0;
@@ -22,7 +22,8 @@ public class GameManager : MonoBehaviour {
 
 	public Text scoreText;
 	public Text distanceText;
-
+	public GameObject deathText;
+	public Text highScoreText;
 
 	//public GameObject nextLevelTextObject = null;
 	//pausedTextObject
@@ -69,8 +70,26 @@ public class GameManager : MonoBehaviour {
 			// set pausedTextObject.SetActive(true);
 		}
 		else if (state == GameState.gameover) {
+
+			if (PlayerPrefs.HasKey ("HighScore")) {
+				if (PlayerPrefs.GetInt ("HighScore") > score) {
+					highScoreText.text = "HighScore: " + 
+										PlayerPrefs.GetInt ("HighScore");
+				} else {
+					PlayerPrefs.SetInt ("HighScore", score);
+					highScoreText.text = "HighScore: " +
+										PlayerPrefs.GetInt ("HighScore");
+				}
+			} else {
+				PlayerPrefs.SetInt ("HighScore", score);
+				highScoreText.text = "HighScore: " +
+									PlayerPrefs.GetInt ("HighScore");
+			}
+
 			 //menu SetActive to true
 			//play again Set Active to true
+			deathText.SetActive(true);
+
 			if (Input.GetKeyDown(KeyCode.R)) { // press play again on menu button
 				Restart ();
 				state = GameState.playing;
@@ -99,6 +118,7 @@ public class GameManager : MonoBehaviour {
 	public static void AddScore(int points) {
 		score += points;
 		Debug.Log (score);
+
 	}
 
 	public static void AddDistance(float distanceRan) {
@@ -136,7 +156,8 @@ public class GameManager : MonoBehaviour {
 		//decide what to do with level
 		//maybe keep level same for demo so can get to end
 		player.SendMessage ("Respawn");
-		SceneManager.LoadScene ("Level1");
+		Scene scene = SceneManager.GetActiveScene ();
+		SceneManager.LoadScene (scene.name);
 
 	}
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class TutorialText : MonoBehaviour {
 
 	public GameObject tutorialText;
-	public GameObject lastText = null;
+	public GameObject lastText;
 
 
 	void OnTriggerEnter(Collider other) {

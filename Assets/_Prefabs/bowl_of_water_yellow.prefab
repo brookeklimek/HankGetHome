@@ -138,3 +138,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c57bb3cf5cd6ab4b8533a18b01f722b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectWater: {fileID: 8300000, guid: ec28adccbeb07474fac8504a17c3e8d5, type: 3}

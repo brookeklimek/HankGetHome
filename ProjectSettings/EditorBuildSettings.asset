@@ -6,17 +6,29 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/Start_Scene.unity
+    path: Assets/_Scenes/HankGotHome.unity
     guid: 5fdc01f5f3a622e4abc7a5c8380796b3
   - enabled: 1
     path: Assets/_Scenes/Environment_Scene.unity
     guid: 5dd0ba2d158f8d14da788a20823f54eb
-  - enabled: 1
-    path: Assets/_Scenes/Level1.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/2d2d594ffa66d4d1488a2370247f906c
     guid: 2d2d594ffa66d4d1488a2370247f906c
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/67b52677a9e3c42a4b8cdef753016736
+    guid: 67b52677a9e3c42a4b8cdef753016736
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/49951634e97aa4522beeff12a5370c59
+    guid: 49951634e97aa4522beeff12a5370c59
   - enabled: 1
     path: Assets/_Scenes/Level2.unity
-    guid: 67b52677a9e3c42a4b8cdef753016736
+    guid: fa22be04f1b3249479077542808845e0
   - enabled: 1
     path: Assets/_Scenes/Level3.unity
-    guid: 49951634e97aa4522beeff12a5370c59
+    guid: 3ee93e5bcf15d49ef98cffa9f8569d62
+  - enabled: 1
+    path: Assets/_Scenes/Onboarding.unity
+    guid: 651955cd0230349b293ce58082f8dce2
+  - enabled: 1
+    path: Assets/_Scenes/Start_Scene.unity
+    guid: 7c0d9e5b29ee94b5b88d554e69a0cf33

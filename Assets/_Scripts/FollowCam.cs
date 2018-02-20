@@ -13,42 +13,7 @@ public class FollowCam : MonoBehaviour {
 	private Vector3 moveCamera;
 
 	private float transition = 0.0f;
-//	public static bool turning;
-//	//private bool playerturn;
-//
-//	void Start() {
-//		player = GameObject.FindGameObjectWithTag ("Player").transform;
-//		startOffset = transform.position - player.position;
-//		turning = false;
-//		//playerturn = true;
-//	}
-//
-//	void Update() {
-//		moveCamera = player.position + startOffset;
-//		transform.position = moveCamera;
-//		// X
-//
-//		//Y 
-//		moveCamera.y = Mathf.Clamp (moveCamera.y, 1, 3);
-//
-//		if (transition > 1) {
-//			transform.position = moveCamera;
-//		}
-//		else {
-//			// Game start animation
-//			transform.position = Vector3.Lerp (moveCamera + animationOffset, moveCamera, transition);
-//			//take 2 seconds for transition to equal 1 then game starts.
-//			transition += Time.deltaTime * 1 / animationDuration;
-//			// rotate the camera to look at player + 1 u
-//			transform.LookAt (player.position + Vector3.up);
-//		}
-//
-//
-//
-////		
-//
-//
-//	}
+//	
 
 	public Transform player;
 

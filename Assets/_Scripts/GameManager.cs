@@ -9,11 +9,11 @@ public class GameManager : MonoBehaviour {
 
 	public static int level = 1;
 	public static int maxLevel = 3;
-	public static int scoreToNextLevel = 30;
+	public static int distanceToNextLevel = 100; // change to 150
 	public static int increaseSpeed = 5;
 
 	public static int score = 0;
-	public static int distance = 0;
+	public static float distance = 0;
 	public static GameState state;
 	public static GameObject player;
 	public static bool pausedGame;
@@ -78,17 +78,21 @@ public class GameManager : MonoBehaviour {
 		}
 
 		//When to Increase level/make game harder
-		if(score >= scoreToNextLevel) {
+		if(distance >= distanceToNextLevel) {
+			Debug.Log ("Ready for next level");
 			if(level == maxLevel) {
-				return;
+				SceneManager.LoadScene ("HankHome");
 			}
 			else {
-				scoreToNextLevel *= 2;
+				distanceToNextLevel *= 2;
 				level++;
-				GetComponent<PlayerController> ().SetSpeed (increaseSpeed);
+				SceneManager.LoadScene ("Level" + level);
+				player.SendMessage ("SetSpeed");
+
 
 			}
 		}
+
 	}
 
 	// Public Methods
@@ -97,7 +101,8 @@ public class GameManager : MonoBehaviour {
 		Debug.Log (score);
 	}
 
-	public static void AddDistance(int distanceRan) {
+	public static void AddDistance(float distanceRan) {
+		
 		distance = distanceRan;
 	}
 
@@ -131,7 +136,7 @@ public class GameManager : MonoBehaviour {
 		//decide what to do with level
 		//maybe keep level same for demo so can get to end
 		player.SendMessage ("Respawn");
-		SceneManager.LoadScene ("Environment_Scene");
+		SceneManager.LoadScene ("Level1");
 
 	}
 

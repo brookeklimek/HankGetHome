@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 114444467197254394}
   - component: {fileID: 136289288594285046}
   - component: {fileID: 114063293198505618}
+  - component: {fileID: 114610237482507864}
   m_Layer: 0
   m_Name: Bone
   m_TagString: Untagged
@@ -431,6 +432,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 5
   collect: {fileID: 8300000, guid: d09e88c7366d3384cb38c7295578f510, type: 3}
+--- !u!114 &114610237482507864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858112901293346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef68b2a028e5c5649a34ad4d8d842973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 20
 --- !u!122 &122207759328291982
 Halo:
   m_ObjectHideFlags: 1
